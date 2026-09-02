@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="600.0" spacing="5.0" style="-fx-background-color: #b7d5ef;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.inventariopulperia.controllers.ProductController">
+   <children>
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="236.0" text="Pulpería ">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="150.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Registrar Producto">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label text="Codigo">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCode" />
+      <Label text="Nombre del producto">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" />
+      <Label text="Precio">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrecio" />
+      <Label text="Cantidad">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCantidad" />
+      <Button mnemonicParsing="false" onAction="#registrar" text="Registrar" />
+      <Label text="Buscar por Codigo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="txtBuscarCode" onKeyPressed="#onActionBuscar" promptText="Ingrese código y presione ENTER" />
+      <Label fx:id="lblProducto" text="Producto:" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
