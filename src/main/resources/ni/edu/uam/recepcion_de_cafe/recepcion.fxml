@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.recepcion_de_cafe.Controller.CafeController">
+   <children>
+      <Label text="Recepcion de cafe" textAlignment="CENTER" textFill="#2d0303">
+         <font>
+            <Font name="Wide Latin" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </Label>
+
+      <TableView fx:id="tablaLotes" prefHeight="200.0" prefWidth="520.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="colProductor" prefWidth="150.0" text="Productor" />
+            <TableColumn fx:id="colVariedad" prefWidth="120.0" text="Variedad" />
+            <TableColumn fx:id="colKilos" prefWidth="100.0" text="Kilos" />
+         </columns>
+      </TableView>
+
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="txtProductor" promptText="Productor" />
+            <TextField fx:id="txtVariedad" promptText="Variedad" />
+            <TextField fx:id="txtKilos" promptText="Kilos" />
+            <Button mnemonicParsing="false" onAction="#guardarLote" text="Guardar" />
+         </children>
+         <VBox.margin>
+            <Insets top="15.0" bottom="15.0" />
+         </VBox.margin>
+      </HBox>
+
+      <Label fx:id="lblDetalles" text="Selecciona un lote para ver sus detalles..." textAlignment="CENTER" textFill="#2d0303">
+         <font>
+            <Font name="Ebrima" size="12.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+   </padding>
+</VBox>
